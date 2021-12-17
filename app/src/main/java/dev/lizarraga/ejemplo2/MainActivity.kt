@@ -49,12 +49,14 @@ class MainActivity : ComponentActivity() {
     fun SeccionResultado(modifier: Modifier, myViewModel: MyViewModel) {
         Column(modifier = Modifier
             .height(300.dp)
-            .fillMaxWidth()) {
+            .fillMaxWidth(),
+            horizontalAlignment = Alignment.End,
+            verticalArrangement = Arrangement.Center) {
             Text(text = myViewModel.input, modifier.padding(end = 25.dp, top = 50.dp), 
                 fontSize = 40.sp, color = Color.Blue, fontWeight = FontWeight.Bold
             )
             Text(text = myViewModel.result, modifier.padding(end = 25.dp, bottom = 80.dp), 
-            fontSize = 30.sp, color = Color.DarkGray)  
+            fontSize = 60.sp, color = Color.DarkGray)
         }
     }
     
@@ -147,8 +149,7 @@ class MainActivity : ComponentActivity() {
             else -> {
                 Button(onClick = { myViewModel.onInputChange(name) },
                     modifier.size(70.dp, 70.dp),
-                    shape = CircleShape,
-                    colors = ButtonDefaults.buttonColors(Color.Green)) {
+                    shape = CircleShape) {
                     Text(text = name, textAlign = TextAlign.Center,
                         fontSize = 30.sp, color = color)
                 }

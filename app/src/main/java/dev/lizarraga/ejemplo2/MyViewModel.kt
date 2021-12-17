@@ -4,7 +4,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-//import com.notkamui.keval.Keval
+import com.notkamui.keval.Keval
 
 class MyViewModel : ViewModel() {
 
@@ -22,8 +22,8 @@ class MyViewModel : ViewModel() {
 
     fun getResultt() {
         try {
-            //val kk :String= (Keval.eval(input)).toString()
-            //result = kk
+            val kk :String= (Keval.eval(input)).toString()
+            result = kk
         } catch (e: Exception) {
             result = "¡Error matemático!"
             input = ""
